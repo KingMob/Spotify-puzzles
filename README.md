@@ -18,6 +18,6 @@ I produced a working version in Java, but the verifier said it was too slow. Unf
 
 Instead, I assumed the issue was an insufficiently fast algorithm. I ended up writing several versions trying to get it fast enough, using variants of simple breadth-first search, Hopcroft-Karp and push-relabel max flow algorithms.
 
-After getting sufficiently exasperated (since I knew the core parts could complete the largest problem in under 200 ms), I decided to time it end-to-end, and lo and behold, the vast majority of the time taken was simple JVM start-up time (a few seconds). My algorithm was choice was (probably) irrelevant.
+After getting sufficiently exasperated (since I knew the core parts could complete the largest problem in under 200 ms), I decided to time it end-to-end, and lo and behold, the vast majority of the time taken was simple JVM start-up time (a few seconds). My algorithm choice was (probably) irrelevant.
 
 After that, I chose the simplest algorithm, the breadth-first search for augmenting paths, and rewrote in C++, which was more than fast enough. I hadn't used C++ since college, so it was a welcome chance to see what had changed in the language. Unfortunately, the version of GCC used by Spotify's verifier was slightly older, and certain standard library names hadn't quite stabilized (e.g., .fill() vs .assign()), but after a last push of fiddling with compiler flags, it was done!
