@@ -1,0 +1,605 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 7:18:17 Aug 16, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:57:03 Mar 8, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+img.right{float:right;}
+.billboard{height:248px;overflow:hidden;margin:0 0 12px;padding:102px 0 0 0;font-size:24px;color:#444;text-align:center;}
+.billboard .heading{display:none;}
+.with_menu .billboard{height:220px;margin:10px 10px -10px 0;padding:82px 0 0;color:#ededed;font-size:18px;text-shadow:1px 1px 1px #83ab39;}
+.contentcontainer,.contentcontainer .contentbox{display:inline-block;}
+.contentcontainer,.contentcontainer .contentbox{-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;display:block;}
+.contentcontainer{position:relative;overflow:hidden;margin-bottom:12px;padding:0 0 10px 10px;background:url(/web/20120816071817/http://cf.scdn.co/i/content-bg.png) repeat 0 0;}
+.contentcontainer .contentbox{position:relative;padding:27px 27px 0;margin:10px 10px 0 0;border-left:1px solid #e4e4e4;border-right:1px solid #eee;border-bottom:1px solid #ccc;background-color:#fff;}
+.with_menu .contentbox{float:left;width:670px;margin-top:10px;-moz-border-radius-topleft:0;-webkit-border-top-left-radius:0;border-border-top-left-radius:0;-moz-border-radius-topright:0;-webkit-border-top-right-radius:0;border-border-top-right-radius:0;}
+.with_menu .featurebox{min-height:657px;padding-bottom:51px;}
+.with_menu .linksbox{min-height:565px;padding-bottom:33px;}
+.with_rightcolumn .contentbox{float:left;width:582px;margin:10px 10px 0 0;}
+.contentbox h3{color:#333;font-size:14px;font-weight:bold;line-height:18px;}
+.contentbox .navbar{position:absolute;left:0;bottom:0;overflow:hidden;width:100%;border-top:1px solid #e3e3e3;-moz-border-radius-bottomleft:6px;-webkit-border-bottom-left-radius:6px;border-border-bottom-left-radius:6px;-moz-border-radius-bottomright:6px;-webkit-border-bottom-right-radius:6px;border-border-bottom-right-radius:6px;font-size:11px;background:#f7f7f7;}
+.contentbox .navbar .left{float:left;padding:8px 0 6px 27px;}
+.contentbox .navbar .right{float:right;padding:8px 27px 6px 0;}
+.contentbox .navbar a{font-weight:bold;}
+.contentcontainer .onethirdcolumn{float:left;margin:12px 12px 12px 0;padding:0;}
+.onethirdcolumn .innercontainer{height:490px;margin:3px;padding:9px;background:#fafafa;}
+.m-us .onethirdcolumn .innercontainer{height:532px;}
+.contentcontainer .onethirdcolumn h2{margin:0 0 12px;padding:0;color:#333;}
+.contentcontainer .onethirdcolumn h2 a{color:#333;}
+.column1,.column2{clear:both;float:left;width:430px;margin-right:36px;}
+.column2{clear:none;float:right;margin-right:0;}
+.with_menu .column1,.with_menu .column2{width:317px;margin-bottom:20px;}
+#bottom_teasercontainer{overflow:hidden;margin-bottom:12px;}
+#bottom_teasercontainer a.teaser{overflow:hidden;float:left;width:212px;height:142px;margin:0 12px 0 0;padding:10px 12px;color:#555;font-size:12px;}
+#bottom_teasercontainer a.teaser.last{margin-right:0;}
+#bottom_teasercontainer a.teaser span.heading{display:block;margin-bottom:4px;color:#222;font-size:16px;font-weight:bold;}
+#bottom_teasercontainer a.teaser span.product{color:#4da400;}
+.contentcontainer .teaserstrip{clear:both;width:956px;height:234px;margin:12px 0 0;}
+.contentcontainer .teaserstrip .teaser{float:left;width:270px;height:186px;padding:24px;color:#555;font-size:13px;background-repeat:no-repeat;}
+.contentcontainer .teaserstrip .teaser .heading{display:block;margin-bottom:4px;color:#333;font-size:16px;font-weight:bold;}
+.contentcontainer .teaserstrip .teaser.middle{width:272px;}
+.small_pseudo_heading{margin:0 0 12px;color:#333;font-size:12px;font-weight:bold;}
+.two-columns{overflow:auto;}
+.two-columns.separator{padding-top:5px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/two-cols-bg.png) no-repeat 120px -5px;}
+.two-columns .col1{float:left;width:650px;margin-right:50px;}
+.two-columns .col2{float:left;width:280px;}
+ul.two_column_list{float:left;width:45%;margin-right:10px;font-size:13px;}
+#faq-overview .more_help{float:left;width:260px;margin-top:0;margin-left:5px;padding:10px;margin-top:0;font-size:13px;background:#f6f6f6;}
+#faq-overview .clear{clear:both;}
+#faq-overview h2,#help-overview-right h2{color:#222;font-size:18px;font-weight:normal;}
+#faq-category .highlight{background-color:#e0f2c2;padding:10px;margin:5px 0 20px;}
+#faq-category .highlight p{margin:0;}
+#service-status{background-repeat:no-repeat;left:-35px;margin:60px auto 0;padding:0 0 75px 85px;position:relative;width:420px;}
+#service-status.status-ok{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/service-status-ok.png);}
+#service-status.status-fail{background-image:url("/web/20120816071817/http://cf.scdn.co/i/wp/service-status-fail.png");}
+#help-overview-right #service-status{background-position:right top;left:0;margin:0;padding:0 0 10px;top:-10px;width:auto;}
+#help-overview-right #service-status h2{width:150px;padding-top:20px;color:#555;font-size:13px;line-height:18px;}
+#help-overview-right #service-status p{display:none;}
+#help-overview-right ul,#faq-answers ul,#faq-questions ul{font-size:13px;}
+#faq-answers li .time{padding-left:3px;font-size:90%;color:#999;}
+body.l-de div#whatisspotify .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/about/what/billboard_de.jpg) no-repeat center;}
+body.l-nl div#whatisspotify .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/about/what/billboard_nl.jpg) no-repeat center;}
+div#whatisspotify .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/what-is-spotify/whatisspotify_billboard_en.jpg) no-repeat center;}
+.l-es div#whatisspotify .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/what-is-spotify/whatisspotify_billboard_es.jpg) no-repeat center;}
+.l-fr div#whatisspotify .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/what-is-spotify/whatisspotify_billboard_fr.jpg) no-repeat center;}
+div#whatisspotify #whatisbox{padding-bottom:27px;}
+div#whatisspotify #whatisbox .box{clear:both;margin:0 0 36px;padding-bottom:12px;}
+div#whatisspotify img.alignleft{float:left;margin:0 12px 0 -27px;}
+div#whatisspotify img.alignright{float:right;margin:0 -27px 0 12px;}
+div#whatisspotify #everywherebox p{font-size:18px;line-height:22px;}
+div#whatisspotify #conceptvideolink{float:right;display:block;width:186px;margin:-12px 0 0 36px;padding:114px 0 24px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/what-is-spotify/whatisspotify_conceptvideo_thumb.jpg) no-repeat;font-size:12px;}
+div#whatisspotify #everywherebox #conceptvideolink:hover span{background-color:#e0f2c2;}
+#leftmenu{float:left;width:236px;margin:10px 0 0;padding:0;list-style-type:none;}
+#leftmenu li{margin:0;padding:0;background-color:#fff;border-top:1px solid #dfdfdf;border-left:1px solid #e4e4e4;}
+#leftmenu li a{color:#777;display:block;font-size:12px;height:45px;line-height:47px;padding:0 12px;white-space:nowrap;overflow:hidden;}
+#features #leftmenu li a{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/features/leftmenu_icons.gif) no-repeat;padding:0 12px 0 50px;}
+#features #leftmenu li.li1 a{background-position:0 0;}
+#features #leftmenu li.li2 a{background-position:0 -45px;}
+#features #leftmenu li.li3 a{background-position:0 -90px;}
+#features #leftmenu li.li4 a{background-position:0 -135px;}
+#features #leftmenu li.li5 a{background-position:0 -180px;}
+#features #leftmenu li.li6 a{background-position:0 -225px;}
+#features #leftmenu li.li7 a{background-position:0 -270px;}
+#features #leftmenu li.li8 a{background-position:0 -315px;}
+#features #leftmenu li.li9 a{background-position:0 -360px;}
+#features #leftmenu li.li10 a{background-position:0 -405px;}
+#features #leftmenu li.li11 a{background-position:0 -450px;}
+#features #leftmenu li.li12 a{background-position:0 -495px;}
+#features #leftmenu li.li13 a{background-position:0 -540px;}
+#features #leftmenu li.li14 a{background-position:0 -630px;}
+#features #leftmenu li.li15 a{background-position:0 -675px;}
+#leftmenu li.li1,#leftmenu li.last{background:transparent url(/web/20120816071817/http://cf.scdn.co/i/wp/leftmenu_bg.png) no-repeat 0 -47px;border:0;}
+#leftmenu li.last{background-position:0 -92px;}
+#leftmenu li a:hover,#leftmenu li.selected a,.lm-li1 #leftmenu li.li1 a,.lm-li2 #leftmenu li.li2 a,.lm-li3 #leftmenu li.li3 a,.lm-li4 #leftmenu li.li4 a,.lm-li5 #leftmenu li.li5 a,.lm-li6 #leftmenu li.li6 a,.lm-li7 #leftmenu li.li7 a,.lm-li8 #leftmenu li.li8 a,.lm-li9 #leftmenu li.li9 a,.lm-li10 #leftmenu li.li10 a,.lm-li11 #leftmenu li.li11 a,.lm-li12 #leftmenu li.li12 a,.lm-li13 #leftmenu li.li13 a,.lm-li14 #leftmenu li.li14 a,.lm-li15 #leftmenu li.li15 a{color:#444;background-color:transparent;overflow:hidden;}
+#leftmenu li.selected,.lm-li1 #leftmenu li.li1,.lm-li2 #leftmenu li.li2,.lm-li3 #leftmenu li.li3,.lm-li4 #leftmenu li.li4,.lm-li5 #leftmenu li.li5,.lm-li6 #leftmenu li.li6,.lm-li7 #leftmenu li.li7,.lm-li8 #leftmenu li.li8,.lm-li9 #leftmenu li.li9,.lm-li10 #leftmenu li.li10,.lm-li11 #leftmenu li.li11,.lm-li12 #leftmenu li.li12,.lm-li13 #leftmenu li.li13,.lm-li14 #leftmenu li.li14,.lm-li15 #leftmenu li.li15{background:transparent url(/web/20120816071817/http://cf.scdn.co/i/wp/leftmenu_bg.png) 0 0;border:0 none;color:#333;font-weight:bold;height:46px;margin:-2px -18px -1px 0;padding-top:1px;position:relative;text-shadow:0 1px 0 #fff;width:255px;z-index:1;}
+#leftmenu li.leftmenu_heading{font-size:14px;padding:10px;color:#4DA400;}
+div#features .drawing{position:absolute;left:0;bottom:12px;overflow:hidden;width:214px;height:321px;text-indent:-999em;}
+div#features .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/features/billboard_en.png);}
+img.alignleft{float:left;margin:0 12px 12px 0;}
+img.alignright{float:right;margin:0 0 12px 12px;}
+div#features #createimage{margin:0 0 60px 36px;}
+div#features #sharingimage{margin:24px 16px 60px 0;padding-right:24px;}
+div#features #collaborativeimage{margin:12px -27px 0 60px;}
+div#features #twitterimage{margin:6px 12px 60px 0;}
+div#features #inboximage{margin:2px 12px 72px 0;}
+div#features #phonesimage{margin:0 12px 24px;}
+div#features #photoimage{margin:-6px 24px 36px 0;}
+div#features #drawingimage{margin:6px 72px 36px 42px;}
+div#features #arrow1image{margin:12px 275px 0 0;}
+div#features #ourlistsimage{margin:6px -8px 48px;}
+div#features #arrow2image{margin:18px 246px 0 12px;}
+div#features #yourlistsimage{margin:6px -8px 18px;}
+div#features #offlineimage{margin:0 14px 134px -27px;}
+div#features #switchimage{margin:0 0 18px -12px;}
+div#features #wheneverimage{margin:-24px -27px 0 36px;}
+div#features #clientimage{margin:0 12px 36px -27px;}
+div#features #qualityimage{margin:12px -5px 12px 12px;}
+div#features #anytimeimage{padding:0 24px 0 12px;}
+div#features #abroadbox{position:relative;clear:both;width:auto;margin:0 0 36px;padding:0 0 84px;}
+div#features #abroadbox h2{padding-top:160px;}
+div#features #handimage{position:absolute;top:10px;right:-24px;}
+div#features #abroadimage{margin:-84px 24px 12px -36px;padding:160px 0 0;}
+div#features #phonesimage{margin:-5px 0 -1px 12px;}
+div#features #filterimage{margin:0 16px 12px -27px;}
+div#features #starredimage{margin:-12px -27px 12px 12px;}
+div#features #syncimage{margin:-24px 40px 0 -27px;}
+div#features #photoimage{margin:6px 20px 36px 0;}
+div#features #biographyimage{margin:24px -8px 12px;}
+div#features .contentbox.featurebox.artist_radio #clientimage{margin:0 24px 48px -24px;}
+div#features #stickfigures{float:right;width:152px;height:90px;margin:0 0 12px 24px;padding:128px 0 0 172px;color:#666;font-size:13px;font-weight:bold;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/features/related_artists_stick_figures.jpg) no-repeat;}
+div#features .contentbox.featurebox.related_artists #stickfigures a.name{color:#666;text-decoration:underline;background:transparent;}
+div#features .contentbox.featurebox.related_artists #clientimage{margin:12px -7px 12px;}
+div#features .contentbox.featurebox.connect_with_facebook #clientimage{margin:0 30px 0 -27px;}
+a.thumb{position:relative;display:block;}
+a.thumb img{display:block;border:0;}
+a.thumb .banner{position:absolute;top:-10px;left:-13px;width:101px;height:105px;overflow:hidden;background:0 0 no-repeat;text-indent:1000px;}
+a.thumb .banner.premium{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/features/thumb_banner_premium.png);}
+a.thumb .banner.unlimited{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/features/thumb_banner_unlimited.png);}
+#social .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/social/social_billboard_en.jpg);}
+div#social img.alignleft{margin:0 40px 50px 0;}
+div#social #videocontainer{background-color:#000;height:495px;margin-bottom:60px;}
+body.l-de div#local .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/about/local/billboard_de.png);}
+div#local .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/local/local_billboard_en.jpg);}
+.l-es div#local .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/local/local_billboard_es.jpg);}
+.l-fr div#local .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/local/local_billboard_fr.jpg);}
+div#local img.alignleft{margin:0 40px 50px 0;}
+div#local img.alignright{margin:6px 24px 12px 36px;}
+div#local #explainedclient{position:relative;width:882px;height:480px;margin-bottom:84px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/local/local_explainedclient_en.jpg) no-repeat 58px 14px;}
+div#local #explainedclient span{position:absolute;font-size:14px;}
+div#local #explainedclient span.localfiles{top:248px;left:0;}
+div#local #explainedclient span.import{top:0;left:346px;}
+div#local #explainedclient span.symbol{top:234px;left:746px;}
+div#local #fileformats{height:54px;margin-bottom:18px;padding-bottom:110px;}
+div#local #fileformats .fileformat{position:relative;float:left;width:70px;height:34px;margin-right:12px;padding:20px 0 0;font-size:18px;font-weight:bold;text-align:center;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/local/local_fileformat_bg.jpg);}
+div#local #fileformats .fileformat .explanation{position:absolute;top:62px;left:14px;width:166px;padding:30px 0 0 40px;color:#777;font-family:'lucida grande',helvetica,arial,'nimbus sans l',sans-serif;font-size:10px;font-weight:normal;text-align:left;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/local/local_fileformat_explanation_bg.gif) no-repeat;}
+body.l-de div#ontheweb .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/about/spotify-on-the-web/billboard_de.png);}
+div#ontheweb .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_billboard_en.png);}
+.m-es div#ontheweb .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_billboard_en.png);}
+.m-fr div#ontheweb .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_billboard_en.png);}
+.l-nl div#ontheweb .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_billboard_nl.png);}
+.l-de div#ontheweb .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_billboard_de.png);}
+div#ontheweb .contentcontainer .drawing{position:absolute;text-indent:-999em;}
+div#ontheweb .contentcontainer #drawing_text{top:640px;left:24px;width:180px;height:109px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_drawing_text_en.png);}
+div#ontheweb .contentcontainer #drawing_cake{left:18px;bottom:12px;width:185px;height:165px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_drawing_cake_en.png);}
+body.l-de div#ontheweb .contentcontainer #drawing_cake{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_drawing_cake_de.png);}
+body.l-nl div#ontheweb .contentcontainer #drawing_cake{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/spotify-on-the-web/ontheweb_drawing_cake_nl.png);}
+div#ontheweb .contentbox.linksbox.all_categories .disclaimer{clear:both;margin:24px 0;padding:9px 18px;color:#888;font:italic 12px/18px 'lucida grande',tahoma,arial,sans-serif;border-bottom:1px dotted #D3D3D3;border-top:1px dotted #D3D3D3;}
+div#ontheweb .contentbox.linksbox.all_categories .disclaimer .head{font-family:'lucida grande',tahoma,arial,sans-serif;font-style:normal;font-weight:bold;}
+div#ontheweb .contentbox.linksbox .sites{width:337px;margin-top:18px;padding:0;}
+div#ontheweb .contentbox.linksbox .sites li{list-style:none;}
+div#ontheweb .contentbox.linksbox .sites .name{color:#63bf00;font-size:18px;line-height:36px;}
+div#musiccatalogueinfo .billboard{height:132px;padding:188px 0 0;color:#ededed;text-shadow:1px 1px 1px #83ab39;background:url(/web/20120816071817/http://cf.scdn.co/i/billboards/en/musiccatalogueinfo.png);}
+.l-es div#musiccatalogueinfo .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/billboards/es/musiccatalogueinfo.png);}
+.l-fr div#musiccatalogueinfo .billboard{background:url(/web/20120816071817/http://cf.scdn.co/i/billboards/fr/musiccatalogueinfo.png);}
+#labelscontainer{overflow:hidden;padding:24px 0 0 36px;}
+#labelscontainer .label{overflow:hidden;float:left;width:150px;margin:0 0 30px;padding:0;border:0;background-color:transparent;}
+#labelscontainer .label.even{float:right;}
+#labelscontainer .label img{border:0;}
+#labelscontainer .label:hover img{margin-left:-150px;}
+a.bottom_button{clear:both;display:block;width:882px;height:84px;margin:18px 0 27px;padding:24px 0 0;font-size:16px;line-height:30px;text-align:center;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/bottom_button_bg.jpg) #F6F6F6;}
+.contentcontainer .contentbox a.bottom_button .head{color:#444;font-size:20px;font-weight:bold;}
+.overviewbox{overflow:auto;}
+div#musiccatalogueinfo .overviewbox a.bottom_button{margin-top:60px;}
+div#contact ul.offices{overflow:hidden;margin:0 0 18px;padding:0;width:400px;list-style:none outside none;}
+div#contact ul.offices li{float:left;width:180px;height:108px;margin-right:20px;}
+div#contact ul.offices.single-office li{height:auto;margin-bottom:20px;}
+div#contact ul.offices .be-fr-office{display:none;}
+div#contact ul.offices.single-office .be-fr-office{display:block;}
+body.m-be-fr .be-nl-office{display:none;}
+.contentcontainer #top_downloadbanner{overflow:hidden;display:block;width:820px;height:33px;margin:0 0 12px;padding:24px 46px 0 92px;color:#555;font-size:14px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/top_downloadbanner_bg_grey.gif) no-repeat;}
+.contentcontainer #top_downloadbanner span{color:#08C;}
+div#getspotify .onethirdcolumn{width:310px;margin:0 12px 0 0;}
+div#getspotify .onethirdcolumn a.thumb{margin:-12px -14px 12px;}
+div#getspotify .onethirdcolumn h2{float:left;font-size:28px;}
+div#getspotify .onethirdcolumn .price{float:right;width:auto;color:#636363;font-size:22px;font-weight:normal;text-align:right;}
+div#getspotify .onethirdcolumn .price .recurring{font-size:10px;line-height:16px;}
+div.neat-hr,div#getspotify .onethirdcolumn hr{clear:both;height:0;height:1px;background-color:#EEE;border:none;line-height:1px;margin:0 0 10px;}
+ul.base-feature-list,ul.feature-list{overflow:hidden;list-style-type:none;padding:0;margin:10px 0 18px 0;}
+#getspotify ul.base-feature-list{margin:6px 0;}
+.l-fr #getspotify .onethirdcolumn ul{margin-top:10px;}
+ul.base-feature-list li{float:left;width:58px;height:31px;margin:0 7px 0 0;padding:0 0 0 31px;color:#636363;font-family:'Lucida Grande',tahoma,arial,sans-serif;font-size:11px;line-height:14px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/base_checklist_icons.png) no-repeat;}
+ul.base-feature-list li.last{margin:0;}
+ul.base-feature-list li#checklist_item_base_local_files{background-position:0 5px;}
+ul.base-feature-list li#checklist_item_base_share{background-position:0 -25px;}
+ul.base-feature-list li#checklist_item_base_millions_of_tracks{background-position:0 -56px;}
+ul.feature-list li{margin:0 0 10px;padding:0 0 0 42px;color:#555;font-size:12px;line-height:32px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/checklist_icons.png) no-repeat;}
+ul.feature-list li#checklist_item_mobile{background-position:0 -36px;}
+ul.feature-list li#checklist_item_offline_mode{background-position:0 -504px;}
+ul.feature-list li#checklist_item_no_advertising{background-position:0 -216px;}
+ul.feature-list li#checklist_item_unlimited{background-position:0 -360px;}
+div#getspotify .onethirdcolumn .buttonbar{bottom:6px;height:32px!important;min-height:0;padding:0;position:absolute;}
+div#getspotify .onethirdcolumn .buttonbar a.small_button{float:left;}
+a.small_button{display:inline-block;height:32px;margin:-1px 20px 0 -1px;overflow:visible;padding:0;position:relative;width:auto;background:transparent url(/web/20120816071817/http://cf.scdn.co/i/common2.png) -500px -151px;}
+a.small_button:hover{background-color:transparent;}
+a.small_button span{position:relative;top:0;right:-15px;display:block;height:28px;padding:1px 20px 3px 7px;color:#444;cursor:pointer;font-size:12px;line-height:28px;text-shadow:1px 1px 1px #FFF;background:url(/web/20120816071817/http://cf.scdn.co/i/common2.png) right -151px;}
+a.small_button span.product{position:static;display:inline;margin:0;padding:0;font-weight:bold;background:none;}
+div#getspotify .onethirdcolumn a.learn-more{position:absolute;right:13px;bottom:14px;text-align:right;}
+.comparebox table{width:100%;margin-bottom:20px;}
+.comparebox table th{width:20%;padding:0 6px 12px;border-right:1px dotted #D3D3D3;color:#555;font-size:12px;font-style:italic;font-weight:normal;line-height:18px;text-align:left;}
+.comparebox table th.last{border-right:0;}
+.comparebox table th .product{color:#333;font-size:14px;font-style:normal;font-weight:bold;}
+.comparebox table td{height:40px;padding:6px;border-top:1px dotted #D3D3D3;color:#555;font-size:12px;text-align:center;vertical-align:middle;}
+.contentcontainer .contentbox.infobox.comparebox table td.feature{color:#333;font-weight:bold;text-align:left;}
+.comparebox table td.odd{background-color:#fff;}
+.comparebox table td.even{background:#f6f6f6;}
+.comparebox table td.odd.yes{background:#e0f3cc;}
+.comparebox table td.even.yes{background:#D9ecc5;}
+div#getspotify div.not-available-message{top:130px;left:300px;}
+div#getspotify div.not-available-info{padding:7px;background-color:#efefef;position:absolute;bottom:12px;width:272px;}
+.getproduct .column1{width:280px;}
+.getproduct .column2{width:280px;float:left;}
+.getproduct .column3{position:absolute;right:27px;top:32px;width:280px;}
+.getproduct .contentbox a.big_button{position:absolute;right:32px;bottom:24px;}
+div.getproduct .overviewbox h1,div.getproduct .overviewbox .preamble{width:596px;}
+div.getproduct .overviewbox a.teaser{display:block;width:250px;overflow:hidden;padding:18px 15px;background-repeat:no-repeat;font-size:12px;color:#555;}
+div.getproduct .overviewbox a.teaser .heading{display:block;margin-bottom:4px;font-size:16px;font-weight:bold;}
+div.getproduct .overviewbox .teaser{height:148px;}
+div.getproduct .overviewbox #giftteaser_en{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/get-premium/getpremium_giftteaser_bg.jpg);}
+div.getproduct .overviewbox #downloadteaser_en{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/getproduct_downloadteaser_bg_en.jpg);}
+a.big_button{display:inline-block;height:32px;overflow:visible;position:relative;width:auto;padding:0;margin:-1px 20px 0 -1px;background:url(/web/20120816071817/http://cf.scdn.co/i/common2.png) no-repeat -500px -230px;}
+a.big_button span{display:block;position:relative;top:0;right:-15px;height:28px;line-height:28px;padding:3px 20px 3px 7px;background:url(/web/20120816071817/http://cf.scdn.co/i/common2.png) no-repeat right -230px;font-size:12px;color:#444;-moz-text-shadow:#fff 1px 1px 1px;-khtml-text-shadow:#fff 1px 1px 1px;text-shadow:#fff 1px 1px 1px;white-space:nowrap;cursor:pointer;}
+a.big_button span span.product{display:inline;height:auto;padding:0;margin:0;position:static;background-image:none;font-weight:bold;}
+a.big_button{height:40px;background-position:-380px -230px;}
+a.big_button:hover{background-color:transparent;}
+a.big_button span{padding:3px 20px 2px 7px;background-position:right -230px;font-size:14px;height:36px;line-height:33px;right:-18px;}
+a.big_button span span.product{display:inline;height:auto;padding:0;background-image:none;font-weight:bold;}
+a.big_button:hover{background-color:transparent;}
+a.big_button:active{background-position:-380px -270px;}
+a.big_button:active span{background-position:right -270px;}
+#getunlimited .overviewbox{height:auto!important;min-height:750px;}
+#getpremium .overviewbox{height:auto!important;min-height:760px;}
+#getopen .overviewbox{height:auto!important;min-height:640px;}
+#getfree .overviewbox{height:auto!important;min-height:695px;}
+#getfree .overviewbox #advertisementimage{margin:0 -28px;padding:0 0 10px;}
+#getfree .overviewbox #shareimage{padding:10px 0 30px;}
+#daypass .top-section{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/top-section-daypass.jpg);height:280px;text-align:center;position:relative;}
+#daypass .top-section h1{font-size:141px;line-height:200px;padding-top:50px;color:#fff;font-weight:bold;}
+#daypass .product-details{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/product-details-bg.png) no-repeat scroll 0 0 transparent;}
+#daypass .product-details h2{font-size:18px;}
+#daypass .product-details .description{width:285px;float:left;margin-right:50px;}
+#daypass .product-details .action{float:right;overflow:hidden;text-align:center;width:160px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .quote{position:relative;float:left;width:188px;height:262px;overflow:hidden;padding:12px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/testimonials/testimonialsbox_quote_bg.jpg) no-repeat;font-size:20px;font-weight:bold;}
+.contentcontainer .contentbox.infobox.testimonialsbox .wide{width:410px;margin:0 24px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .quote .left_corners{position:absolute;top:0;left:0;width:5px;height:100%;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/testimonials/testimonialsbox_quote_bg.jpg) no-repeat;}
+.contentcontainer .contentbox.infobox.testimonialsbox .last{margin:0 0 20px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .blue{background-position:100% -286px;background-color:#f2f6fe;color:#7997c7;}
+.contentcontainer .contentbox.infobox.testimonialsbox .purple{background-position:100% -858px;background-color:#fef0fd;color:#9d61ba;}
+.contentcontainer .contentbox.infobox.testimonialsbox .yellow{background-position:100% -1430px;background-color:#f9f8cc;color:#facb39;}
+.contentcontainer .contentbox.infobox.testimonialsbox .blue .left_corners{background-position:0 0;}
+.contentcontainer .contentbox.infobox.testimonialsbox .purple .left_corners{background-position:0 -572px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .yellow .left_corners{background-position:0 -1144px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .begin,.contentcontainer .contentbox.infobox.testimonialsbox .end{width:30px;height:22px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/testimonials/testimonialsbox_quotation_marks.gif) no-repeat;}
+.contentcontainer .contentbox.infobox.testimonialsbox .begin{margin-bottom:6px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .end{margin-top:6px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .blue .begin{background-position:0 0;}
+.contentcontainer .contentbox.infobox.testimonialsbox .purple .begin{background-position:0 -44px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .yellow .begin{background-position:0 -88px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .blue .end{background-position:0 -22px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .purple .end{background-position:0 -66px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .yellow .end{background-position:0 -110px;}
+.contentcontainer .contentbox.infobox.testimonialsbox .quote .author{position:absolute;right:12px;bottom:12px;font-size:12px;font-weight:bold;color:#444;text-align:right;}
+.contentcontainer .contentbox.infobox.testimonialsbox .quote .author a:hover{background-color:transparent;}
+.contentcontainer .contentbox.infobox.testimonialsbox .quote .author img{padding-bottom:2px;border:none;}
+.contentcontainer .contentbox.infobox.testimonialsbox .quote .author .title{font-size:11px;font-weight:normal;font-style:italic;}
+.checklist{line-height:29px;margin:0 0 24px;padding:0 0 6px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/checklist_bg.gif) 0 100% no-repeat #fcfbdc;width:280px;}
+.checklist h2{height:32px!important;margin:0 0 18px!important;padding:21px 4px 0!important;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/checklist_bg.gif) 0 0 no-repeat #999!important;font-size:16px!important;color:#fff!important;text-align:center!important;line-height:20px;}
+.checklist ul{margin:18px 21px 12px;padding:0;list-style-type:none;}
+.checklist ul li{position:relative;height:36px;margin:0 0 24px;padding:0 0 0 42px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/checklist_icons.png) no-repeat;font-size:12px!important;color:#555;}
+li#checklist_item_music_platform{background-position:0 0;}
+li#checklist_item_mobile{background-position:0 -36px;}
+li#checklist_item_sound_quality{background-position:0 -72px;}
+li#checklist_item_share{background-position:0 -108px;}
+li#checklist_item_mp3{background-position:0 -144px;}
+li#checklist_item_anywhere{background-position:0 -180px;}
+li#checklist_item_no_advertising{background-position:0 -216px;}
+li#checklist_item_sync{background-position:0 -252px;}
+li#checklist_item_24hours{background-position:0 -288px;}
+li#checklist_item_20hours{background-position:0 -324px;}
+li#checklist_item_unlimited{background-position:0 -360px;}
+li#checklist_item_playlists{background-position:0 -396px;}
+li#checklist_item_search{background-position:0 -432px;}
+li#checklist_item_top_lists{background-position:0 -468px;}
+li#checklist_item_offline_mode{background-position:0 -504px;}
+li#checklist_item_buy{background-position:0 -540px;}
+li#checklist_item_library{background-position:0 -576px;}
+li#checklist_item_clean_up{background-position:0 -612px;}
+li#checklist_item_biographies{background-position:0 -648px;}
+li#checklist_item_radio{background-position:0 -684px;}
+li#checklist_item_related_artists{background-position:0 -720px;}
+li#checklist_item_facebook{background-position:0 -756px;}
+li#checklist_item_advertising{background-position:0 -792px;}
+li#checklist_item_import{background-position:0 -828px;}
+li#checklist_item_invitation{background-position:0 -864px;}
+li#checklist_item_base_local_files{background-position:0 5px;}
+li#checklist_item_base_share{background-position:0 -25px;}
+li#checklist_item_base_millions_of_tracks{background-position:0 -56px;}
+li#checklist_item_mobile_free_radio{background-position:0 -940px;}
+ul.icon-list{padding:0;list-style-type:none;}
+ul.icon-list li{margin-bottom:20px;padding-left:50px;position:relative;}
+ul.icon-list li span.icon{background:url("/web/20120816071817/http://cf.scdn.co/i/wp/checklist_icons.png") no-repeat scroll 0 0 transparent;height:36px;left:0;position:absolute;width:36px;}
+ul.icon-list li#checklist_item_mobile span.icon{background-position:0 -36px;}
+ul.icon-list li#checklist_item_offline_mode span.icon{background-position:0 -504px;}
+ul.icon-list li#checklist_item_no_advertising span.icon{background-position:0 -216px;}
+ul.icon-list li#checklist_item_sound_quality span.icon{background-position:0 -72px;}
+ul.icon-list li#checklist_item_anywhere span.icon{background-position:0 -180px;}
+ul.icon-list li#checklist_item_unlimited span.icon{background-position:0 -360px;}
+ul.icon-list li#checklist_item_exclusive span.icon{background-position:0 -901px;}
+#action_billboard{position:relative;display:block;height:350px;margin:0 0 12px;cursor:pointer;text-align:center;background-repeat:no-repeat;}
+#action_billboard .button{position:relative;top:120px;display:block;float:none;width:640px;height:112px;margin:0 auto;padding:0 56px 0 0;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/action_billboard_button_bg.png) no-repeat right -112px;}
+#action_billboard .button span{display:block;height:78px;padding:34px 0 0 56px;color:#fff;font-size:48px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/action_billboard_button_bg.png) no-repeat;}
+#action_billboard .button .product{font-weight:bold;}
+#action_billboard .button span span{display:inline;padding:0;background-image:none;}
+#action_billboard .button .sub,#action_billboard .button .sub span{display:block;height:auto;padding:24px 0 0;color:#BEFF7C;font-size:20px;}
+#action_billboard .button:hover{background-position:right -336px;}
+#action_billboard .button:hover span{background-position:0 -224px;}
+div#mobile #billboard{height:250px;margin-bottom:12px;padding:100px 0 0;color:#EDEDED;font-size:22px;text-align:center;text-shadow:1px 1px 1px #83AB39;background:url(/web/20120816071817/http://cf.scdn.co/i/mobile/mobile_billboard.jpg) no-repeat;}
+div#mobile #billboard.blackwhite{color:#000;text-shadow:1px 1px 1px #666;background:url(/web/20120816071817/http://cf.scdn.co/i/mobile/mobile_billboard_bw.jpg) no-repeat;}
+div#mobile #billboard .heading{display:none;}
+div#mobile .overviewbox #textcontainer{float:left;width:440px;}
+div#mobile .overviewbox #phonescontainer{float:left;width:404px;padding:24px 0 0 36px;}
+div#mobile .overviewbox #phonescontainer .phone{position:relative;float:left;width:182px;margin:0 36px 36px 0;font-size:14px;}
+div#mobile .overviewbox #phonescontainer .phone .heading{font-weight:bold;}
+div#mobile .overviewbox #phonescontainer .last{margin-right:0;}
+.smsbox{width:588px;height:269px;margin:0 0 48px;padding:42px 24px 0 270px;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/mobile/mobile_smsbox_bg.jpg) no-repeat;}
+.smsbox .footnote{clear:both;color:#8A8A8A;font-size:11px;font-style:italic;line-height:14px;padding-top:12px;width:375px;}
+div#mobile .overviewbox .column{float:left;width:268px;margin-left:18px;}
+div#mobile .overviewbox h2{margin:12px 0 6px;font-size:14px;line-height:18px;}
+div#mobile .overviewbox .appstore-link,div#mobile .overviewbox .appstore-link:hover{float:right;margin-top:20px;background-color:transparent;}
+div#mobile .overviewbox a img{border:0;}
+div#mobile .overviewbox #phonescontainer{overflow:hidden;float:left;width:404px;padding:24px 0 0 36px;}
+div#mobile .overviewbox #phonescontainer.nofloat{float:none;width:auto;padding:0 0 20px 0;}
+div#mobile .overviewbox p.footnote{margin-top:48px;color:#999;font-family:'lucida grande',helvetica,arial,'nimbus sans l',sans-serif;font-size:10px;line-height:15px;}
+div#mobile .overviewbox #learnmorecontainer{float:left;width:576px;}
+div#mobile .overviewbox #linkscontainer{float:left;width:270px;margin-left:36px;}
+div#blog .col1{margin:0 10px 0 0;width:644px;}
+.two-columns .col1{float:left;}
+div#blog div.col1 .contentbox.blogpostbox{height:auto!important;min-height:1300px;width:588px;padding-bottom:27px;}
+div#blog div.col1 .contentbox.blogpostbox .archive_heading h1{border-bottom:5px solid #EEE;color:#333;font-size:12px;font-weight:bold;margin:0 0 48px;padding:0 0 12px;line-height:1;}
+div#blog div.pagenav{color:#555;font-size:12px;height:25px;line-height:25px;position:relative;}
+div#blog div.pagenav .arrows{position:absolute;top:0;right:0;width:74px;}
+div#blog div.pagenav .arrows div,div#blog div.pagenav .arrows div a{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_pagenav_arrows.jpg) no-repeat scroll 0 0 transparent;display:block;float:left;height:0;margin:0;overflow:hidden;padding-top:25px;position:relative;width:37px;}
+div#blog div.pagenav .arrows .left{background-position:0 -50px;}
+div#blog div.pagenav .arrows .left a{background-position:left top;margin-top:-25px;}
+div#blog div.pagenav .arrows .right{background-position:-36px -50px;}
+div#blog div.pagenav .arrows .right a{background-position:right top;margin-top:-25px;}
+div#blog div.post{margin:6px 0 54px;}
+div#blog div.post div.date,div#blog div.post .commentbutton,div#blog div.post div.meta .tags .title,div#blog div.post div.meta .tags span span,div#blog div.post div.meta a.twitterbutton{font-family:'lucida grande',helvetica,arial,'nimbus sans l',sans-serif;font-size:10px;font-weight:bold;}
+div#blog div.post h1.title{background-repeat:no-repeat;color:#333;font-size:28px;margin:-16px 0 0;padding:16px 0 12px;line-height:1;}
+#blog div.post h1.title a:link,#blog div.post h1.title a:visited,#blog div.post h1.title a:active{color:#222;}
+div#blog div.post h2{color:#333;font-size:18px;font-weight:normal;margin:18px 0 6px;line-height:1;}
+div#blog div.post div.date{color:#777;margin-bottom:24px;}
+div#blog div.post div.date a{color:#777;}
+#blog div.post div.body p{margin:0 0 15px;}
+#blog div.post div.body small.read_more{white-space:nowrap;font-size:11px;}
+div#blog div.post .commentbutton{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_commentbutton_bg.gif) no-repeat scroll 0 0 #DBF0FA;color:#555;display:block;float:right;font-size:11px;height:31px;line-height:22px;margin:19px 0 3px;padding:0 0 0 9px;white-space:nowrap;}
+div#blog div.post .commentbutton span{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_commentbutton_bg.gif) no-repeat scroll 100% 0 #DBF0FA;cursor:pointer;display:block;height:22px;padding:0 9px 9px 0;}
+div#blog div.post div.meta{border-bottom:5px solid #EEE;clear:both;padding:24px 0 0;}
+div#blog div.post div.meta .tags{float:left;margin-bottom:9px;width:420px;}
+div#blog div.post div.meta .tags .title{color:#555;line-height:16px;}
+div#blog div.post div.meta .tags a:hover{color:#EEE;}
+div#blog div.post div.meta .tags span span{background-color:#D2D2D2;color:#FFF;display:block;float:left;height:22px;line-height:22px;margin:3px 6px 3px 0;padding:0 6px;text-transform:uppercase;white-space:nowrap;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;}
+div#blog div.post div.meta .tags span a{background:none;color:#FFF;}
+div#blog div.post div.meta .socialbar{border-top:1px solid #E4E4E4;clear:both;margin:12px 0 0;padding:12px 0;}
+div#blog div.post div.meta .socialbar iframe,div#blog div.post div.meta .feedback iframe{display:block;}
+div#blog div.post div.meta div.author{color:#777;font-size:12px;}
+div#blog div.post div.meta a.twitterbutton{background-color:#41CCFF;color:#FFF;display:block;float:left;height:20px;line-height:20px;margin:0 10px 0 0;overflow:hidden;text-align:center;white-space:nowrap;width:30px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+div#blog div.commentlist{border-bottom:5px solid #EEE;margin:24px 0;padding:12px 0 24px;}
+div#blog .commentlist div.comment-bubble-top{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_comment_bubble_bg.gif) no-repeat scroll 0 0 transparent;height:18px;width:588px;}
+div#blog .commentlist div.comment-bubble-top_free{background-position:0 0;}
+div#blog .commentlist div.comment-bubble-top_premium{background-position:0 -24px;}
+div#blog .commentlist div.comment-bubble-top_employee{background-position:0 -48px;}
+div#blog .commentlist div.comment-bubble-middle{overflow:hidden;width:588px;padding-bottom:6px;-moz-border-radius-bottomleft:6px;-webkit-border-bottom-left-radius:6px;border-border-bottom-left-radius:6px;-moz-border-radius-bottomright:6px;-webkit-border-bottom-right-radius:6px;border-border-bottom-right-radius:6px;}
+div#blog .commentlist div.comment-bubble-middle_free{background-color:#E2E2E2;}
+div#blog .commentlist div.comment-bubble-middle_premium{background-color:#DAF0FA;}
+div#blog .commentlist div.comment-bubble-middle_employee{background-color:#D6F8CA;}
+div#blog .commentlist div.comment-bubble-bottom_employee{background-position:0 -66px;}
+div#blog div.comment{margin:24px 0 12px;}
+div#blog div.comment p{color:#555;margin:0;padding:6px 12px;}
+div#blog div.comment.even p{color:#444;}
+div#blog div.comment div.meta{border-bottom:0 none;font-size:12px;margin:0 0 6px;padding:0;}
+div#blog div.comment div.meta a{color:#555;}
+div#blog div.comment div.meta span.author{color:#1787CD;font-weight:normal;}
+div#blog .col2{float:left;width:306px;}
+div#blog .col2 .listbox{margin:10px 0 24px;padding:12px 12px 0;position:relative;-moz-border-radius-topleft:6px;-webkit-border-top-left-radius:6px;border-border-top-left-radius:6px;-moz-border-radius-topright:6px;-webkit-border-top-right-radius:6px;border-border-top-right-radius:6px;}
+div#blog .col2 .listbox .border.bottom{background-position:0 100%;bottom:-12px;height:16px;background-repeat:no-repeat;left:-1px;position:absolute;width:306px;}
+div#blog .col2 ol li,div#blog .col2 ul li{list-style-type:none;}
+div#blog .listbox ul,div#blog .listbox ol{margin:0;padding-bottom:18px;}
+div#blog .col2 .listbox h2{font-size:18px;font-weight:bold;line-height:1;margin:0 0 6px;padding:0 0 11px;}
+div#blog .col2 .toparticlesbox{background-color:#FDFCE8;border-left:1px solid #E4E4E4;border-right:1px solid #EEE;color:#E1B932;}
+div#blog .col2 .toparticlesbox .border{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_toparticlesbox_borders.png);}
+div#blog .col2 .toparticlesbox h2{border-bottom:1px solid #EAE0B7;color:#E1B932;text-shadow:0 1px 0 #FFF;}
+div#blog .col2 .toparticlesbox .feed-link{height:18px;padding-top:7px;}
+div#blog .col2 .toparticlesbox ol{list-style-type:none;margin:0;padding:0;}
+div#blog .col2 .toparticlesbox li{list-style:none outside none;margin:0;padding:0;}
+div#blog .col2 .toparticlesbox li a{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_toparticlesbox_bullet.gif) no-repeat scroll 9px 12px transparent;border-bottom:1px solid #F4EED0;color:#E1B932;display:block;font-size:14px;font-weight:bold;line-height:18px;padding:6px 0 6px 24px;text-shadow:0 1px 0 #FFF;}
+#blog #feed-link-text{margin-left:3px;}
+div#blog .col2 .toparticlesbox .feed-link a:link,div#blog .col2 .toparticlesbox .feed-link a:visited{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/feed-icon-14x14.png) no-repeat scroll 0 0 transparent;color:#E1B932;display:block;font-size:12px;font-weight:bold;padding-left:21px;text-shadow:0 1px 0 #FFF;}
+div#blog .col2 .categoriesbox{background-color:#E9F5FC;border-left:1px solid #E4E4E4;border-right:1px solid #EEE;color:#73ACD2;}
+div#blog .col2 .categoriesbox .border{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_categoriesbox_borders.png);}
+div#blog .col2 .categoriesbox h2{border-bottom:1px solid #A5CBE4;color:#73ACD2;text-shadow:0 1px 0 #FFF;}
+div#blog .col2 .categoriesbox ul{color:#73ACD2;margin:0;padding:0;}
+div#blog .col2 .categoriesbox li{margin:0;padding:0;}
+div#blog .col2 .categoriesbox li a{color:#73ACD2;display:block;font-size:14px;font-weight:bold;height:18px;padding:5px 0 3px 10px;text-shadow:0 1px 0 #FFF;white-space:nowrap;}
+div#blog .col2 .activitybox{margin:36px 0 0;background:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_activitybox_bg.png) no-repeat scroll 0 100% transparent;border-top:1px solid #1F60A2;position:relative;}
+div#blog .col2 .activitybox .tape{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_activitybox_bg.png) no-repeat scroll 0 0 transparent;height:36px;left:146px;overflow:hidden;position:absolute;top:-20px;width:27px;z-index:1;}
+div#blog .col2 a#badgebox_en{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_badgebox_bg_en.png);}
+body.l-de div#blog .col2 a#badgebox_en{background-image:url(/web/20120816071817/http://cf.scdn.co/i/blog/badgebox_bg_de.png);}
+body.l-nl div#blog .col2 a#badgebox_en{background-image:url(/web/20120816071817/http://cf.scdn.co/i/blog/badgebox_bg_nl.png);}
+div#blog .col2 a.badgebox{background-repeat:no-repeat;color:#333;display:block;font-size:18px;font-weight:bold;height:132px;line-height:22px;margin:12px 0 0;padding:24px;}
+div#blog .contentcontainer #drawing_en{background-image:url(/web/20120816071817/http://cf.scdn.co/i/wp/blog_drawing_en.png);}
+body.l-de div#blog .contentcontainer #drawing_en{background-image:url(/web/20120816071817/http://cf.scdn.co/i/blog/drawing_de.png);}
+body.l-nl div#blog .contentcontainer #drawing_en{background-image:url(/web/20120816071817/http://cf.scdn.co/i/blog/drawing_nl.png);}
+div#blog .contentcontainer .drawing{background-repeat:no-repeat;bottom:12px;height:184px;overflow:hidden;position:absolute;right:36px;text-indent:1000px;white-space:nowrap;width:259px;}
+div#blog-archives .archivesbox{padding:22px 27px 36px;}
+div#blog-archives .archivesbox h2{color:#333;font-size:18px;font-weight:normal;line-height:1;margin-bottom:20px;}
+div#blog-archives .archivesbox hr.dotted{margin:19px 0 6px;}
+div#blog-archives .archivesbox .column{float:left;margin:0 24px 24px 0;width:286px;}
+div#blog-archives .archivesbox .column.last{margin-right:0;}
+div#blog-archives .archivesbox h3{color:#333;font-size:14px;font-weight:bold;margin:0 0 12px;padding:0;}
+div#blog-archives .archivesbox h3 a{color:#333;}
+div#blog-archives .archivesbox li{font-size:12px;line-height:17px;margin-bottom:4px;}
+ul.paging{background-position:0 -16px;background-repeat:no-repeat;margin:1em 0;}
+ul.paging-head{border-bottom-style:solid;border-bottom-width:1px;}
+ul.paging{-moz-border-radius:3px 3px 3px 3px;background-color:#F4F4F4;border-color:#CCC;overflow:hidden;list-style:none outside none;margin:0;padding:4px 6px;}
+ul.paging li{float:left;margin-top:0;}
+ul.paging li a,ul.paging li span{display:block;font-size:16px;line-height:1;padding:4px 6px;}
+ul.paging li a,ul.paging li strong{-moz-border-radius:5px 5px 5px 5px;}
+ul.paging li span{padding-left:0;}
+ul.paging li strong{background:none repeat scroll 0 0 #D0EAF1;display:block;}
+div#blog #commentform p{color:#555;font-size:12px;}
+div#blog #commentform textarea.comment{background-color:#FEFBEF;border:1px solid #D8D8D8;height:100px;width:100%;}
+div#getting-started-placeholder{padding:20px 20px 2px;}
+div#getting-started-placeholder a.close{display:none;}
+div#getting-started-placeholder #token{padding:4px;font-size:16px;}
+div#getting-started-placeholder #button-continue{margin:-3px 0 0;}
+div#mobile ul.handsetcontainer{list-style:none outside none;margin:24px 0 0;padding:0;overflow:auto;padding-bottom:30px;}
+div#mobile .handsetcontainer .handset{color:#666;display:block;float:left;font-size:14px;height:178px;margin:0 0 24px;overflow:hidden;padding:6px;text-align:center;white-space:nowrap;width:164px;position:relative;}
+div#mobile .handsetcontainer .handset:hover{background-color:#F8F8F8;color:#333;}
+div#mobile .handsetcontainer .handset a:hover{background-color:transparent;}
+div#mobile .handsetcontainer .handset img{padding-bottom:6px;}
+div#mobile .handsetcontainer .handset span{display:block;color:#555;position:absolute;white-space:normal;bottom:0;height:2.5em;}
+#phonenavigator{background:url("/web/20120816071817/http://cf.scdn.co/i/wp/mobile/phonenavigator_phonescontainer_bg.png") no-repeat scroll 231px 0 transparent;border:1px solid #D3D3D3;height:628px;margin:12px 0;position:relative;width:880px;}
+#phonenavigator .menucontainer{border-right:1px solid #D3D3D3;height:628px;left:0;margin:0;padding:0;position:absolute;top:0;width:230px;z-index:1;}
+#phonenavigator .menucontainer a.switch{background:url("/web/20120816071817/http://cf.scdn.co/i/wp/mobile/phonenavigator_menucontainer_bg.png") no-repeat scroll 0 -45px transparent;bottom:-1px;color:#FFF;font-weight:bold;height:52px;left:-1px;line-height:52px;position:absolute;text-align:center;width:232px;}
+#phonenavigator .menucontainer ul{list-style-type:none;margin:0;padding:0;}
+#phonenavigator .menucontainer ul li{margin:0;padding:0;}
+#phonenavigator .menucontainer ul li a{color:#666;display:block;font-size:14px;font-weight:bold;height:40px;line-height:40px;padding:0 12px;white-space:nowrap;}
+#phonenavigator .menucontainer ul li.selected a{background:url("/web/20120816071817/http://cf.scdn.co/i/wp/mobile/phonenavigator_menucontainer_bg.png") no-repeat scroll 0 0 transparent;color:#FFF;height:45px;line-height:44px;margin:-2px -21px -3px -3px;padding:0 15px;position:relative;width:224px;z-index:1;}
+#phonenavigator .phonescontainer{height:628px;overflow-x:hidden;overflow-y:scroll;position:absolute;right:0;top:0;width:649px;}
+#phonenavigator .phonescontainer .grid{background-image:url("/web/20120816071817/http://cf.scdn.co/i/wp/mobile/phonenavigator_phonescontainer_grid.png");min-height:628px;overflow:auto;}
+#phonenavigator .phonescontainer .grid .phone{color:#555;display:block;float:left;font-size:14px;height:198px;margin:0 0 1px 1px;overflow:hidden;padding-top:12px;text-align:center;width:208px;}
+#phonenavigator .phonescontainer .grid .phone:hover{background-color:rgba(236,236,236,0.50);}
+#phonenavigator .phonescontainer .grid .phone a:hover{background-color:transparent;}
+#phonenavigator .phonescontainer .grid .phone img{display:block;margin:0 auto 12px;border:none;}
+.phonesbox p.extracharges{color:#8A8A8A;font-size:12px;margin:0;padding:0 80px 40px;text-align:center;}
+.contentcontainer .contentbox.infobox.faqbox .column1{float:left;width:416px;margin-right:48px;}
+.contentcontainer .contentbox.infobox.faqbox .column2{float:left;width:416px;}
+.faqbox h2{color:#333;font-size:24px;font-weight:bold;padding:20px 0 0;}
+.faqbox a.goto{display:block;float:right;text-align:right;}
+.faqbox .tagline{margin:0 0 48px;padding:0 0 6px;}
+.faqbox h3{color:#4DA400;font-size:14px;line-height:19px;margin:0 0 6px;}
+#press-room .contentcontainer.with_rightcolumn .rightcolumn{float:left;width:258px;padding:27px 27px 8px;}
+#press-room .articles,#press-room .articles ul{list-style-type:none;padding:0;}
+#press-room .articles{padding-left:10px;}
+#press-room .articles .date{font-weight:bold;font-size:12px;}
+.gallery-thumbs{padding:0;}
+.gallery-thumbs li{display:block;overflow:auto;float:left;font-size:11px;text-align:center;margin-bottom:4px;width:124px;}
+.gallery-thumbs li:first-child{margin-top:6px;}
+.gallery-thumbs li a{display:block;height:145px;overflow:hidden;padding:5px;border:1px solid #DDD;text-align:center;color:#555;width:100px;line-height:12px;}
+.gallery-thumbs li img{display:block;border:none;margin:0 auto 7px;}
+#background-info .author{color:#999;margin-top:3px;display:block;}
+#partner-contact .column1{margin-bottom:10px;}
+#partner-contact .column2{width:438px;}
+#partner-contact table{font-size:13px;border-collapse:collapse;}
+#partner-contact table tr td{padding:3px 5px;border-collapse:collapse;}
+#partner-contact table p{font-size:14px;}
+#partner-contact table textarea{width:500px;height:150px;}
+#labels-and-artists .info{width:470px;float:left;}
+#top-tracks{padding-bottom:27px;}
+#top-tracks .track-list{width:500px;border-top:1px solid #ddd;font-size:13px;}
+#top-tracks .track-list td{padding:3px 5px;border-bottom:1px solid #ddd;vertical-align:middle;}
+#top-tracks .track-list .pos{text-align:right;width:55px;}
+#top-tracks .track-list .art{width:100px;}
+#top-tracks .track-list .art img{display:block;height:100px;}
+#download .rightcolumn{width:258px;padding-bottom:15px;}
+#download .rightcolumn #service-status{background-position:right -10px;padding:0 72px 0 0;margin:0;left:0;width:200px;}
+#download .rightcolumn #service-status h2{font-size:18px;line-height:1em;}
+#download .rightcolumn #service-status p{margin-top:10px;}
+#labs .rightcolumn{width:258px;padding-bottom:27px;}
+div.not-available-message{background:url("/web/20120816071817/http://cf.scdn.co/i/wp/not-available.png") no-repeat scroll 0 0 transparent;height:73px;left:366px;position:absolute;text-align:center;top:420px;width:381px;z-index:10;}
+div.not-available-message div{padding:10px;}
+div.not-available-message p{font-size:15px;margin:5px 0;}
+div.not-available-message p a{font-size:11px;}
+#retro .track-list{float:left;width:430px;font-size:13px;}
+#retro .track-list td,#retro .track-list th{border-bottom:1px solid #ddd;vertical-align:middle;padding:3px 5px;}
+#retro .track-list th{font-weight:normal;text-align:right;}
+#retro .track-list td.art{width:100px;}
+#retro .track-list td.art img{height:100px;display:block;}
+#retro .track-list td a{font-weight:bold;}
+#why-not-available div.top-section{background:url("/web/20120816071817/http://cf.scdn.co/i/wp/why-not-available.png") no-repeat scroll 0 0 transparent;height:280px;position:relative;text-align:center;}
+#why-not-available div.top-section h1{color:#3F3F3F;font:bold 42px arial,helvetica,sans-serif;left:415px;padding:0;margin:0;position:absolute;top:100px;text-indent:-999em;}
+#why-not-available div.info{float:left;margin-right:50px;width:576px;}
+#why-not-available div.get-notified{float:left;width:270px;}
+ul#market_list{list-style-type:none;}
+ul#market_list img.market_flag{position:relative;top:3px;left:-4px;}
+#supportFormTable,#contactFormTable{margin:0 0 20px;}
+#supportFormTable input,#supportFormTable textarea{padding:3px;border:1px solid #ccc;font:inherit;}
+#supportFormTable input,#supportFormTable select{width:210px;}
+#supportFormTable #submitcontainer,#contactFormTable #submitcontainer{display:block;overflow:auto;padding:10px 0;}
+#supportFormTable #submitcontainer .patience,#contactFormTable #submitcontainer .patience{display:inline-block;padding-bottom:12px;}
+#supportFormTable td,#contactFormTable td{border-collapse:collapse;padding:3px 5px;text-align:left;vertical-align:top;font-size:13px;line-height:1.3;}
+#supportFormTable td.left,#contactFormTable td.left{width:180px;}
+#topicHelp{background-color:#FFCD62;color:black;margin-bottom:5px;margin-top:5px;padding:5px;width:400px;}
+#title,#sTitle,#sError,#storyTopic,#sBrokenTrack,#sBrokenAlbum{width:405px;}
+#sEvent,#additionalInfo,#information{height:300px;line-height:1.2;padding:5px;width:400px;}
+#supportFormTextareaDesc{display:none;}
+#formErrors{width:418px;}
+#formErrors div{background-color:#FFA894;color:#300;margin-bottom:10px;padding:5px;}
+#contactFormMessage{background-color:#ADA;color:#000;margin-bottom:10px;padding:5px;width:418px;}
+#support-form .contentcontainer.with_rightcolumn .rightcolumn{float:left;padding:0 12px;width:288px;}
+#support-form div.rightcolumn div#service-status{background-position:100% 0;left:0;margin:0;padding:0 50px 0 0;width:auto;}
+#support-form #service-status h2{padding-top:20px;line-height:1;font-size:18px;margin:0 0 12px;}
+#event .contentcontainer.with_rightcolumn .rightcolumn,#press-contact .contentcontainer.with_rightcolumn .rightcolumn{float:left;padding:0 12px;width:288px;}
+#badges a{-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;float:left;margin-bottom:.5em;padding:5px 10px 0;}
+#badges a.current{background-color:#D0EAF1;}
+#badge-html{clear:left;display:none;}
+#badge-html textarea{margin:10px 0;}
+.p-account-overview .table-wrapper{margin:0 0 16px;}
+.p-account-overview .table-wrapper tr td{padding:3px 22px 3px 0;}
+.p-account-subscription #card{padding-left:65px;}
+.p-account-subscription #card.visa{background:url(/web/20120816071817/http://cf.scdn.co/tg/images/visa.gif) no-repeat center left;}
+.p-account-subscription #card.mastercard{background:url(/web/20120816071817/http://cf.scdn.co/tg/images/mastercard.gif) no-repeat center left;}
+.p-account-subscription #card.amex{background:url(/web/20120816071817/http://cf.scdn.co/tg/images/amex.gif) no-repeat center left;}
+.p-account-subscription div.payment-intervals{margin:11px 0;}
+.p-account-subscription div.payment-interval{height:55px;width:190px;vertical-align:middle;}
+.p-account-subscription div.payment-interval label{background:url("/web/20120816071817/http://cf.scdn.co/i/wp/order-intervals.png") no-repeat scroll 0 0 transparent;display:block;float:right;height:36px;margin:0 0 3px;overflow:hidden;padding:8px 10px 8px 57px;text-align:left;width:96px;}
+.p-account-subscription #payment-interval-1 label{background-position:0 0;}
+.p-account-subscription #payment-interval-1.act label{background-position:0 -52px;}
+.p-account-subscription #payment-interval-6 label{background-position:-163px 0;}
+.p-account-subscription #payment-interval-6.act label{background-position:-163px -52px;}
+.p-account-subscription #payment-interval-12 label{background-position:-326px 0;}
+.p-account-subscription #payment-interval-12.act label{background-position:-326px -52px;}
+.p-account-subscription div.payment-interval label span.description{display:block;white-space:nowrap;font-size:13px;line-height:15px;}
+.p-account-subscription div.payment-interval label span.price{display:block;font:bold 24px/24px helvetica,arial,sans-serif;white-space:nowrap;}
+.p-account-subscription div.payment-interval input{margin-top:19px;}
+ul#why-cancel{padding:0;list-style-type:none;}
+ul#why-cancel li{margin:0 0 15px 15px;padding-left:30px;position:relative;}
+ul#why-cancel li input[type=radio]{position:absolute;left:0;}
+ul#why-cancel li .input input{width:250px;}
+#cancel-why-button span{font-size:14px;font-family:helvetica,arial,"nimbus sans l",sans-serif;}
+.p-account-subscription-cancel .mobile-image{text-align:center;}
+#account-share ul{list-style:none outside none;margin:0 0 14px;marker-offset:0;padding:0;}
+#account-share ul li{list-style:none outside none;margin:0;padding:4px 0;}
+#account-share div.token{background-color:#DEF;float:left;font-family:monospace;font-size:9pt;padding:1px 4px;}
+#account-share div.token.new{color:#004115;}
+#account-share div.token.sent{background-color:#F8E8D5;color:#402300;}
+#account-share div.token-info-text{float:left;padding:0 10px;width:369px;}
+#account-share div.text{color:#999;float:left;font-size:10px;width:330px;}
+#account-share div.send-tip-ctrl div.text{margin:-3px 0 0 0;}
+#account-share div#create-invitation-ctrl div.text{line-height:30px;}
+#account-share button.flow_button{float:left;}
+#account-share form.invite{margin-bottom:18px;}
+#account-share input.email{font-size:11px;width:250px;}
+.premium-code-receipt-message{background-color:#F3F086;color:#666;font-size:13px;padding:10px;}
+.ecard-receipt-details th{text-align:left;padding:0 15px 5px 3px;}
+.premium-code-receipt-message{background-color:#F3F086;color:#666;font-size:13px;padding:10px;}
+#order table.items{border-collapse:collapse;margin:11px 0;width:100%;}
+#order table.items tr.item td{background-color:#EFEFEF;}
+#order table.items td{border-bottom:1px solid white;line-height:1;padding:8px;white-space:nowrap;width:100%;font-size:13px;}
+#order table.items tr.sum td{background-color:#F3F086;color:#666;font-size:13px;font-weight:bold;}
+#order p.receipt-note{font-size:13px;margin:0;text-align:center;}
+#order #actions{margin:20px 0 0;padding:10px;background-color:#ACF;}
+#order #actions button{margin:0 10px 0 0;}
+#ecardBanner,.ecardBanner{width:980px;height:358px;margin-bottom:12px;}
+.l-en #ecardBanner{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/giftcard/header_gift_card_draft_silver_red_final_uk.jpg) no-repeat;width:980px;height:358px;}
+.l-de #ecardBanner{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/giftcard/header_gift_card_draft_silver_red_final_de.jpg) no-repeat;width:980px;height:358px;}
+.l-es #ecardBanner{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/giftcard/header_gift_card_draft_silver_red_final_es.jpg) no-repeat;width:980px;height:358px;}
+.l-fr #ecardBanner{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/giftcard/header_gift_card_draft_silver_red_final_fr.jpg) no-repeat;width:980px;height:358px;}
+.l-nl #ecardBanner{background:url(/web/20120816071817/http://cf.scdn.co/i/wp/giftcard/header_gift_card_draft_silver_red_final_nl.jpg) no-repeat;width:980px;height:358px;}

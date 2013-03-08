@@ -1,0 +1,100 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 21:11:23 Apr 24, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:57:03 Mar 8, 2013.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+table.jobs{margin-bottom:20px;width:100%;}
+table tr.odd{background:none repeat scroll 0 0 #F7FBF3;}
+table.jobs th{color:#4DA400;font-size:20px;line-height:26px;text-align:left;}
+table.jobs td a,table.jobs th{padding:3px;}
+table.jobs td a{color:#444;display:block;}
+table.jobs td a:hover,table.jobs tr:hover a{background:none repeat scroll 0 0 transparent;color:#222;}
+#jobs h1 span{display:block;font-size:16px;font-style:italic;font-weight:normal;margin-top:-10px;}
+#jobs h1 em{color:#08C;}
+#jobs .big_button{border-left:5px solid #FFF;border-right:5px solid #FFF;margin:0;text-align:center;}
+#jobs .big_button span{font-size:17px;font-weight:bold;min-width:150px;}
+#jobs p.apply{border-bottom:1px dotted #D3D3D3;height:18px;text-align:right;}
+#jobs .rightcolumn{float:left;padding:27px 27px 8px;width:258px;}
+#jobs ul.recent-openings{font-weight:bold;list-style:none outside none;margin:18px 0;padding:0;}
+#jobs ul.recent-openings span{color:#444;display:block;font-weight:normal;}
+#jobs p.all{font-weight:bold;text-align:right;}
+#jobs h3{font-size:16px;}
+#jobs div.share{border:1px dotted #D3D3D3;float:right;margin:25px 5px 5px 15px;padding:10px 10px 0;width:140px;}
+#jobs div.share>div{height:20px;margin-bottom:10px;}
+#jobs div.share .fb_iframe_widget{display:block;height:20px;margin-bottom:10px;}
+#jobs .content{zoom:1;}
+#jobs .content::after{content:"";display:block;clear:both;height:0;}
+#jobs .col1{width:644px;float:left;margin-right:0;}
+#jobs .col2{float:left;width:326px;}
+#jobs .col2 div{overflow:hidden;}
+#jobs h2,h3{margin-bottom:8px;}
+#jobs .two-columns{float:left;}
+#jobs img.alignleft{float:left;margin:0 12px 12px 0;}
+#jobs img.alignright{float:right;margin:0 0 12px 12px;}
+#jobs .highlight{font-weight:bold;font-size:16px;}
+#jobs .puzzleblock{overflow:hidden;}
+#jobs .puzzleblock h2{margin:30px 0 0 0;}
+#jobs .puzzleblock h2 a{color:#08C;}
+#jobs .back{margin:-10px 0 15px 0;}
+#jobs .back a{font-weight:bold;color:#406e8d;font-size:12px;}
+#jobs .piccopy{font-size:8px;color:#999;letter-spacing:-1;float:right;margin:0 0 0 20px;}
+#jobs .inputoutput{width:100%;overflow:hidden;margin-bottom:20px;}
+#jobs .inputoutput .colhead{padding:3px 15px;font-weight:bold;}
+#jobs .inputoutput .leftcol{float:left;width:270px;}
+#jobs .inputoutput .inpbtn{float:left;width:50px;height:50px;background:url(/web/20120424211123/http://cf.scdn.co/i/jobs/colarrow.jpg) no-repeat center 25px;}
+#jobs .inputoutput .rightcol{float:right;width:270px;}
+#jobs .inputoutput .inptbox{border:1px solid #CCC;border-radius:6px;padding:3px 15px;}
+#techvideobox{width:270px;background:url(/web/20120424211123/http://cf.scdn.co/i/jobs/video-box-tech.jpg) no-repeat;display:block;padding:124px 0 24px;}
+#peoplevideobox{width:270px;background:url(/web/20120424211123/http://cf.scdn.co/i/jobs/video-box-people.jpg) no-repeat;display:block;padding:124px 0 24px;}
+#jobs .colboxcontainer{overflow:hidden;margin-bottom:24px;width:100%;}
+#jobs .colboxcontainer .colbox{width:276px;margin-right:20px;float:left;}
+#jobs .colboxcontainer div:last-child{margin-right:0;}
+#jobs .colboxcontainer .colbox p{margin:0;}
+#jobs ul.recent-openings{font-weight:bold;list-style:none outside none;margin-bottom:18px;padding:0;}
+#jobs ul.recent-openings span{color:#444;display:block;font-weight:normal;}
+#jobs p.all{font-weight:bold;text-align:right;}
+#jobs .pplboxcontainer{overflow:hidden;}
+#jobs .pplboxcontainer .left{text-align:left;overflow:hidden;margin-bottom:12px;}
+#jobs .pplboxcontainer .left img{float:right;padding-left:14px;}
+#jobs .pplboxcontainer .left p{font-size:12px;line-height:12px;margin-bottom:0;}
+#jobs .pplboxcontainer .left a{font-family:Georgia,"Times New Roman",Times,serif;font-size:14px;font-style:italic;display:block;line-height:16px;margin-bottom:6px;}
+#jobs .pplboxcontainer .right{text-align:right;overflow:hidden;margin-bottom:12px;}
+#jobs .pplboxcontainer .right img{float:right;padding-left:14px;}
+#jobs .pplboxcontainer .right p{font-size:12px;line-height:12px;}
+#jobs .pplboxcontainer .right a{font-family:Georgia,"Times New Roman",Times,serif;font-size:14px;font-style:italic;display:block;line-height:16px;margin-bottom:6px;}
+#jobs .billboard{background:url("/web/20120424211123/http://cf.scdn.co/i/billboards/en/want_to_work_for_spotify.png") repeat scroll 0 0 transparent;color:#fff;height:110px;line-height:20px;margin:0 1px 12px;overflow:hidden;padding:170px 0 0 40px;text-align:left;}
+#jobs .billboard p{margin:0;width:640px;font-size:14px;}
+#jobs .vacboxcontainer{overflow:hidden;margin-bottom:24px;width:100%;}
+#jobs .vacboxcontainer .vacbox1{width:150px;margin-right:20px;float:left;}
+#jobs .vacboxcontainer .vacbox1 a{display:block;background:#f7f7f7;border:solid 1px #e4e4e4;border-radius:4px;margin-bottom:4px;padding-left:4px;font-size:10px;color:#555;}
+#jobs .vacboxcontainer .vacbox1 a:hover{background:#e0f2c2;border:solid 1px #f7f7f7;}
+#jobs .vacboxcontainer .vacbox1 strong{display:block;margin-bottom:8px;}
+#jobs .vacboxcontainer .vacbox1 .selected{background:#7ab800;color:#fff;border:solid 1px #71a60a;}
+#jobs .vacboxcontainer .vacbox1 a.selected:hover{background:#7ab800;color:#fff;border:solid 1px #71a60a;}
+#jobs .vacboxcontainer .vacbox2{width:415px;float:left;}
+#jobs .vacboxcontainer .vacbox2 #vacoffererror{width:300px;margin:40px auto;text-align:center;}
+#jobs .vacboxcontainer .vacbox2 .vacoffer{background:#f7f7f7;border:solid 1px #e4e4e4;border-radius:4px;margin-bottom:4px;padding:10px 0 0 12px;font-size:14px;color:#555;height:45px;position:relative;overflow:hidden;}
+#jobs .vacboxcontainer .vacbox2 strong{display:block;font-size:16px;font-weight:bold;color:#4da400;}
+#jobs .vacboxcontainer .vacbox2 a.button{position:absolute;top:14px;right:4px;}
+#jobs .peoplebox{border:1px solid #eee;padding:12px;overflow:hidden;}
+#jobs .peoplebox .col{width:170px;float:left;margin-left:20px;}
+#jobs .peoplebox .nm{margin-left:0;}
+#jobs .peoplebox .col a{font-weight:bold;line-height:24px;}
+#jobs .pplboxshadow{height:20px;background:url(/web/20120424211123/http://cf.scdn.co/i/jobs/ppl-box-shadow.jpg) center top no-repeat;margin-bottom:8px;}
+#jobs .people h2{margin:0;}
+#jobs .people h4{margin-bottom:12px;}
+#jobs .pplimg{float:right;margin:0 0 10px 15px;}
+#jobs .favplbox{width:300px;height:40px;border-radius:6px;background:#efefef url("/web/20120424211123/http://cf.scdn.co/i/jobs/spotify-desktop-icon-v2.png") no-repeat scroll 12px 8px;padding:4px 0 0 56px;margin-bottom:30px;}
+#jobs .favplbox strong{display:block;}
+#jobs .pplbottomnav{overflow:hidden;margin-bottom:12px;}
+#jobs .pplbottomnav .navright{float:right;width:200px;text-align:right;}
+#jobs .pplbottomnav .navleft{float:left;width:200px;}
+#jobsVideoplayer{margin-bottom:20px;}
