@@ -1,0 +1,66 @@
+// Vertex represents a single node/person in the problem, once transformed into graph form.
+// All vertices are placed into a static pool of shared_ptrs to ensure that when reading the teams
+// to build the neighbors, duplicate Vertex objs aren't created. Weak ptrs are used to build the list
+// of connected vertices, to avoid the problem of circular references.
+
+#ifndef VERTEX_H
+#define VERTEX_H
+
+#include <vector>
+#include <set>
+#include <unordered_map>
+#include <iosfwd>
+#include <memory>
+
+namespace Bilateral {
+
+	class Vertex {
+	private:
+		static std::unordered_map<int, std::shared_ptr<Vertex>> vertices;
+
+		const int id;
+		std::vector<std::weak_ptr<Vertex>> neighbors; // weak to avoid circular reference problem
+
+		Vertex(int newId);
+
+
+	public:
+		const static int ID_IDX_DIFFERENCE = 1000;
+
+		static std::shared_ptr<Vertex> vertexFromId(int id);
+
+		int getIdx() const;
+		int getId() const;
+
+		const std::vector<std::weak_ptr<Vertex> >& getNeighbors() const;
+		int getNumNeighbors() const;
+		void addToNeighbors(std::shared_ptr<Vertex> v);
+
+
+		friend std::ostream& operator<< (std::ostream& out, const Vertex& v);
+	};
+
+
+
+	typedef std::shared_ptr<Vertex> SpVertex;
+	typedef std::weak_ptr<Vertex> WpVertex;
+
+	bool operator<(const Vertex& lhs, const Vertex& rhs);
+	bool operator<(const SpVertex& lhs, const SpVertex& rhs);
+
+	std::ostream& operator<<(std::ostream& out, const std::vector<SpVertex>& vertices);
+	std::ostream& operator<<(std::ostream& out, const std::set<SpVertex>& vertices);
+
+};
+
+// Implementation because std::set wasn't defaulting to operator<
+// GCC bug/detail?
+namespace std {
+	template <>
+	struct less<Bilateral::SpVertex> {
+		bool operator()(const Bilateral::SpVertex& lhs, const Bilateral::SpVertex& rhs) const;
+	};
+};
+
+
+#endif

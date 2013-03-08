@@ -1,0 +1,49 @@
+// The Edges class represents the overall structure of the edges in the graph, and presents
+// the interface used by the main class to access the flow and capacity of edges
+// Most methods take two Vertex objects, and locate the appropriate Edge between them
+
+#ifndef EDGES_H
+#define EDGES_H
+
+#include <iosfwd>
+#include <unordered_map>
+
+#include "Vertex.h"
+#include "Edge.h"
+
+namespace Bilateral {
+	typedef std::pair<int, int> EdgeInfoKey;
+
+	struct VertexPairHash {
+		size_t operator()(const EdgeInfoKey& vv) const;
+	};
+
+	// Class to present interface to all edge-related information
+	class Edges {
+	private:
+		enum edgeInfo_t {FLOW, CAPACITY};
+		std::unordered_map<EdgeInfoKey, Edge, VertexPairHash> edgeInfo;
+
+		static const EdgeInfoKey keyVal(const SpVertex& u, const SpVertex& v);
+
+	public:
+		Edges(int numVertices);
+
+		int getResidualCapacity(const SpVertex& u, const SpVertex& v) const;
+
+		void flipFlow(const SpVertex& u, const SpVertex& v);
+
+
+		int getFlow(const SpVertex& u, const SpVertex& v) const;
+		int getCapacity(const SpVertex& u, const SpVertex& v) const;
+		int getEdgeInfo(const SpVertex& u, const SpVertex& v, edgeInfo_t infoType) const;
+
+		void setFlow(const SpVertex& u, const SpVertex& v, int newFlow);
+		void addToFlow(const SpVertex& u, const SpVertex& v, int flowInc);
+
+		friend std::ostream& operator<<(std::ostream& out, const Edges& edges);
+	};
+
+}
+
+#endif

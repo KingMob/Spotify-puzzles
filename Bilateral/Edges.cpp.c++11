@@ -1,0 +1,97 @@
+#include <iostream>
+
+#include "Edges.h"
+#include "Vertex.h"
+
+namespace Bilateral {
+
+	Edges::Edges(int numVertices) 
+		: edgeInfo(2*numVertices){
+	}
+
+	const EdgeInfoKey Edges::keyVal(const SpVertex& u, const SpVertex& v) {
+		return std::make_pair(u->getId(), v->getId());
+	}
+
+	int Edges::getResidualCapacity(const SpVertex& u, const SpVertex& v) const{
+		int forwardCapacity = getCapacity(u, v);
+
+		// u->v
+		if(forwardCapacity > 0){
+			return forwardCapacity - getFlow(u, v);
+		}
+		// v->u
+		else if(getCapacity(v, u) > 0){
+			return getFlow(v, u);
+		}
+
+		return 0;
+	}
+
+	void Edges::flipFlow(const SpVertex& u, const SpVertex& v){
+		Edge& e = edgeInfo.at(Edges::keyVal(u, v));
+
+		
+		int flow = e.getFlow();
+		int newFlow = flow == 1 ? 0 : 1;
+		e.setFlow(newFlow);
+	}
+
+	int Edges::getFlow(const SpVertex& u, const SpVertex& v) const{
+		return getEdgeInfo(u, v, FLOW);
+	}
+
+	int Edges::getCapacity(const SpVertex& u, const SpVertex& v) const{
+		return getEdgeInfo(u, v, CAPACITY);
+	}
+
+	int Edges::getEdgeInfo(const SpVertex& u, const SpVertex& v, edgeInfo_t infoType) const{
+		auto key = Edges::keyVal(u, v);
+		if(edgeInfo.find(key) == edgeInfo.end()){
+			return 0;
+		}
+		else {
+			const Edge& e = edgeInfo.at(key);
+
+			if(infoType == CAPACITY){
+				return e.getCapacity();
+			}
+			else if(infoType == FLOW){
+				return e.getFlow();	
+			}
+			else{
+				std::cerr << "Unknown infoType: " << infoType << std::endl;
+				abort();
+			}
+		}
+	}
+
+
+	void Edges::setFlow(const SpVertex& u, const SpVertex& v, int newFlow){
+		edgeInfo[Edges::keyVal(u, v)].setFlow(newFlow);
+	}
+
+	void Edges::addToFlow(const SpVertex& u, const SpVertex& v, int flowInc){
+		edgeInfo.at(Edges::keyVal(u, v)).addToFlow(flowInc);
+	}
+
+
+
+	std::ostream& operator<<(std::ostream& out, const Edges& edges){
+		out << "Flow:" << std::endl;
+
+		for(auto it = edges.edgeInfo.begin(); it != edges.edgeInfo.end(); ++it){
+			auto& ids = it->first;
+			auto& e = it->second;
+
+			out << ids.first << " -> " << ids.second << "\tflow: " << e.getFlow() << std::endl;
+		}
+		return out;
+	}
+
+
+	size_t VertexPairHash::operator()(const EdgeInfoKey& vv) const {
+		return std::hash<int>()(vv.first) ^ std::hash<int>()(vv.second);
+	}
+
+}

@@ -1,0 +1,308 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <unordered_map>
+#include <set>
+#include <unordered_set>
+#include <deque>
+#include <list>
+#include <array>
+#include <algorithm>
+
+#include "BilateralBFS.h"
+#include "ProjectParams.h"
+#include "Vertex.h"
+#include "Edge.h"
+#include "Edges.h"
+
+namespace Bilateral {
+
+	BilateralBFS::BilateralBFS(const int2dVector& ids, const intPairVector& teams) :
+		edges(MAX_NUM_VERTICES),
+		source(Vertex::vertexFromId(SOURCE_ID)),
+		sink(Vertex::vertexFromId(SINK_ID)),
+		friendv(Vertex::vertexFromId(ProjectParams::FRIEND_ID)){
+
+		visited.fill(false);
+		prev.fill(-1);
+
+		initialize(ids, teams);
+	}
+
+	void BilateralBFS::solve() {
+		while(findAugmentingPath()) {
+			processPath();
+		}
+
+		computeMatchset();
+		computeInvitees();
+	}
+
+
+	void BilateralBFS::initialize(const int2dVector& ids, const intPairVector& teams){
+		const std::vector<int>& Lset = ids[0];
+		const std::vector<int>& Rset = ids[1];
+
+		setupSourceSide(Lset);
+		setupSinkSide(Rset);
+		setupNeighbors(teams);
+
+		setupInitialMatching();
+
+		prev.fill(-1);
+	}
+
+	// Form edges from source to all left vertices
+	void BilateralBFS::setupSourceSide(const std::vector<int>& ids){
+		for(auto it = ids.begin(); it != ids.end(); ++it){
+			int id = *it;
+
+			SpVertex u(Vertex::vertexFromId(id));
+			LV.push_back(u);
+
+			source->addToNeighbors(u);
+			u->addToNeighbors(source);
+
+			edges.setFlow(source, u, 0);
+		}
+	}
+
+	// Form edges from all right vertices to sink
+	void BilateralBFS::setupSinkSide(const std::vector<int>& ids){
+		for(auto it = ids.begin(); it != ids.end(); ++it){
+			int id = *it;
+
+			SpVertex u(Vertex::vertexFromId(id));
+			RV.push_back(u);
+
+			sink->addToNeighbors(u);
+			u->addToNeighbors(sink);
+
+			edges.setFlow(u, sink, 0);
+		}
+	}
+
+	// set up neighborhoods for each non-sink/source vertex
+	void BilateralBFS::setupNeighbors(const intPairVector& teams){
+		for(auto it = teams.begin(); it != teams.end(); ++it){
+			SpVertex u(Vertex::vertexFromId(it->first));
+			SpVertex v(Vertex::vertexFromId(it->second));
+
+			u->addToNeighbors(v);
+			v->addToNeighbors(u);
+
+			edges.setFlow(u, v, 0);
+		}
+	}
+
+	// Start off with a simple greedy matching
+	void BilateralBFS::setupInitialMatching(){
+		for(auto it = LV.begin(); it != LV.end(); ++it){
+			auto& u = *it;
+
+			auto& neighbors = u->getNeighbors();
+			for(auto neighbIt = neighbors.begin(); neighbIt != neighbors.end(); ++neighbIt){
+				auto v = neighbIt->lock();
+				if(v != source && !visited[v->getIdx()] && edges.getFlow(u, v) == 0){
+					edges.setFlow(source, u, 1);
+					edges.setFlow(u, v, 1);
+					edges.setFlow(v, sink, 1);
+					visited[u->getIdx()] = true;
+					visited[v->getIdx()] = true;
+					break;
+				}
+			}
+		}
+
+		visited.fill(false);
+	}
+
+	// Use a BFS search for an augmenting path
+	// Theoretically suboptimal, but pragmatically fastest for problems with only a few thousand vertices,
+	// according to Setubal 1996
+	bool BilateralBFS::findAugmentingPath(){
+		std::list<SpVertex> queue;
+
+		queue.push_back(source);
+		visited[source->getIdx()] = true;
+		
+		while(!queue.empty()){
+			const auto& u = queue.front();
+
+			auto& neighbors = u->getNeighbors();
+			for(auto neighbIt = neighbors.begin(); neighbIt != neighbors.end(); ++neighbIt){
+				auto v = neighbIt->lock();
+				// if(!visited[v->getIdx()] && edges.getResidualCapacity(u, v) > 0){
+				if(!visited[v->getIdx()]){
+					if(edges.getResidualCapacity(u, v) > 0){
+						prev[v->getIdx()] = u->getIdx();
+						queue.push_back(v);
+
+						visited[v->getIdx()] = true;
+						if(v == sink){
+							return true;
+						}
+					}
+				}
+			}
+
+			queue.pop_front();
+		}
+
+		return false;
+	}
+
+	// Follow path backwards from sink to source, flipping flow along the way
+	void BilateralBFS::processPath() {
+		int v = sink->getIdx();
+
+		while (v != source->getIdx()) {
+			int u = prev[v];
+			
+			edges.flipFlow(Vertex::vertexFromId(u + Vertex::ID_IDX_DIFFERENCE), Vertex::vertexFromId(v + Vertex::ID_IDX_DIFFERENCE));
+			v = u; // follow reverse path to source 
+		}
+
+		 // reset for next iteration 
+		visited.fill(false);
+		prev.fill(-1);
+	}
+
+
+
+	// Konig's theorem methods
+
+	// The algorithm can start with either side of the bipartite graph
+	// Compute in both directions as the friend, may or may not appear in a
+	// particular vertex cover, depending on graph structure
+	void BilateralBFS::computeInvitees(){
+		const std::set<SpVertex>* pResult;
+
+		sort(LV.begin(), LV.end());
+		sort(RV.begin(), RV.end());
+
+		const std::set<SpVertex> minVertexCovers1(computeMinVertexCover(LV, RV));
+		const std::set<SpVertex> minVertexCovers2(computeMinVertexCover(RV, LV));
+
+		if(minVertexCovers1.find(friendv) != minVertexCovers1.end()){
+			pResult = &minVertexCovers1;
+		}
+		else {
+			pResult = &minVertexCovers2;
+		}
+
+
+		for(auto it = pResult->begin(); it != pResult->end(); ++it){
+			auto& v = *it;
+			invitees.insert(v->getId());
+		}
+	}
+
+	// Uses Konig's theorem to compute min vertex cover starting on one side, given a maximum 
+	// matching. Starts with every unmatched vertex, then computes a path from side
+	// to side, alternating with edges that are either in, or not in, the matching.
+	// Every reachable vertex is added to a unordered_set, T.
+	// result is (side1 not in T) union (side2 intersection T)
+	// returns by value for move constructor
+	const std::set<SpVertex> BilateralBFS::computeMinVertexCover(const std::vector<SpVertex>& side1, const std::vector<SpVertex>& side2) const {
+		std::set<SpVertex> konigSet;
+		std::set<SpVertex> unmatched;
+		set_difference(side1.begin(), side1.end(), matches.begin(), matches.end(), std::inserter(unmatched, unmatched.begin()));
+		
+		for(auto it = unmatched.begin(); it != unmatched.end(); ++it){
+			konigDFS(konigSet, *it, false);
+		}
+
+		std::set<SpVertex> result;
+		set_intersection(side2.begin(), side2.end(), konigSet.begin(), konigSet.end(), std::inserter(result, result.begin()));
+		set_difference(side1.begin(), side1.end(), konigSet.begin(), konigSet.end(), std::inserter(result, result.begin()));
+
+		return result;	// returns by value for move constructor
+	}
+
+	// Generates depth-first paths based on Konig's algorithms. Edges used must alternate being in 
+	// or out of the matching
+	void BilateralBFS::konigDFS(std::set<SpVertex>& konigSet, const SpVertex& v, bool edgesInMatch) const {
+		if(konigSet.find(v) == konigSet.end()){
+			konigSet.insert(v);
+			
+			auto& neighbors = v->getNeighbors();
+			for(auto neighbIt = neighbors.begin(); neighbIt != neighbors.end(); ++neighbIt){
+				auto neighb = neighbIt->lock();
+
+				if(neighb->getId() != SOURCE_ID && neighb->getId() != SINK_ID){
+					if(edgesInMatch == (edges.getFlow(v, neighb) > 0 || edges.getFlow(neighb, v) > 0)) {
+						konigDFS(konigSet, neighb, !edgesInMatch);
+					}
+				}
+			}
+		}
+	}
+
+	// Parses the flow after finishing to determine which vertices are in the matching
+	void BilateralBFS::computeMatchset(){
+		for(auto it = LV.begin(); it != LV.end(); ++it){
+			auto& v = *it;
+
+			auto& neighbors = v->getNeighbors();
+			for(auto neighbIt = neighbors.begin(); neighbIt != neighbors.end(); ++neighbIt){
+				auto neighb = neighbIt->lock();
+
+				if(neighb->getId() != SOURCE_ID && edges.getFlow(v, neighb) > 0){
+					matches.insert(v);
+					matches.insert(neighb);
+				}
+			}
+		}
+	}
+
+
+	void BilateralBFS::printSolution(){
+		std::cout << invitees.size() << std::endl;
+		for(auto it = invitees.begin(); it != invitees.end(); ++it){
+			std::cout << *it << std::endl;
+		}
+	}
+
+
+	std::ostream& operator<<(std::ostream& out, const BilateralBFS& s){
+		out << "Source:\t" << *s.source << std::endl;
+		out << "Sink:\t" << *s.sink << std::endl;
+
+		out << "L Vertex vector:" << std::endl;
+		for(auto it = s.LV.begin(); it != s.LV.end(); ++it){
+			out << **it << std::endl;
+		}
+		
+		out << "R Vertex vector:" << std::endl;
+		for(auto it = s.RV.begin(); it != s.RV.end(); ++it){
+			out << **it << std::endl;
+		}
+		out << std::endl << "EDGES" << std::endl << s.edges << std::endl;
+
+		out << "MATCHES:" << std::endl;
+		for(auto it = s.matches.begin(); it != s.matches.end(); ++it){
+			out << (*it)->getId() << std::endl;
+		}
+
+		return out;
+	}
+
+};
+
+
+int main(int argc, char **argv) {
+	using namespace Bilateral; // main itself can't be member of namespace Bilateral
+
+	// return by value, relying on copy elision for efficiency
+	ProjectParams pp(ProjectParams::fromStdIn());
+
+	BilateralBFS solver(pp.getIds(), pp.getTeams());
+
+	// // Solve and print
+	solver.solve();
+	solver.printSolution();
+
+	
+	return 0;
+};

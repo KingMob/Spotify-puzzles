@@ -1,0 +1,7 @@
+#include <boost/unordered/unordered_map.hpp>
+
+int main(int argc, char **argv){
+	using boost::unordered_map;
+
+	unordered_map<int, int> foo();
+}
